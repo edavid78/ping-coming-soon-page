@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $('#form').trigger("reset");
-    $("form :input").attr("autocomplete", "off");
     $('#form').submit(function(e) {
       e.preventDefault();
       var email = $('#email').val();
