@@ -1,0 +1,265 @@
+// Colors
+
+// Primary
+$blue: hsl(223, 87%, 63%);
+
+// Secondary
+$pale-blue: hsl(223, 100%, 88%);
+$light-red: hsl(354, 100%, 66%);
+// Neutral
+$gray: hsl(0, 0%, 59%);
+$very-dark-blue: hsl(209, 33%, 12%);
+$light-border: rgba(33, 51, 97, 0.2);
+
+// Typography
+// Body Copy & call to action font
+$default-body-font-size: 20px;
+$primary-font: 'Libre Franklin', sans-serif;
+
+// heading font
+$headings-font: 'Libre Franklin', sans-serif;
+
+$font-weights: (
+    "light": 300,
+    "semi-bold":600,
+    "bold": 700
+);
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: $default-body-font-size;
+  text-align: center;
+  color: $very-dark-blue;
+}
+
+header {
+  margin-top: 81px;
+  img {
+    width: 54px;
+    text-align: center;
+
+  }
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.container {
+    margin: 35px 15px;
+    max-width: 700px;
+    
+  h1 {
+    color: $very-dark-blue;
+    font-size: 22px;
+  }
+
+  .title {
+    font-weight: map-get($font-weights, "light");
+    color: $gray;
+  }
+  .subscribe {
+    font-size: 12px;
+    color: $very-dark-blue;
+    font-weight: map-get($font-weights, "light");
+  }
+
+  form {
+    margin-bottom: 62px;
+  }
+
+  input[type=email] {
+    width: 81.5%;
+    border: 1px solid $pale-blue;
+    border-radius: 25px;
+    font-size: 12px;
+    padding: 13px 32px;
+    margin: 23px 0 10px 0;
+    box-sizing: border-box;outline: none;
+    
+  }
+
+  ::placeholder {
+    color: $gray;
+    opacity: .6;
+}
+
+  button {
+    width: 81.5%;
+    background-color: $blue;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 13px 28px;
+    margin: 0 0 0 0;
+    box-shadow: 0px 5px 22px 0px $pale-blue;outline: none;
+  }
+
+ 
+
+  .error {
+    color: #ff7a7a;
+    font-style: italic;
+    font-size: 10px;
+    display: block;
+    position: relative;
+    bottom: 73px;
+  }
+
+  .error-border {
+    border: 1px solid $light-red !important;
+    margin-bottom: 35px;
+  }
+
+  .error-spacing {
+    margin-top: 30px;
+  }
+
+  
+
+  .dashboard {
+    width: 93%;
+    margin-bottom: 150px;
+  }
+
+  .icons {
+    margin: 80px auto 30px;
+    display: flex;
+    width: 120px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    .fab {
+      color: $blue;
+      width: 28px;
+      height: 28px;
+      padding: 7px 0;
+      border: 1px solid $light-border; 
+      border-radius: 50px;
+      text-align: center;
+    }
+    .fab:hover {
+      color: white;
+      background-color: $blue;
+      width: 28px;
+      height: 28px;
+      padding: 7px 0;
+      border: none; 
+      border-radius: 50px;
+      text-align: center;
+    }
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  header {
+    margin-top: 85px;
+    text-align: center;
+    img {
+      width: 86px;
+    }
+
+    
+  }
+  .container {
+    margin: auto;
+
+    h1 {
+      font-size: 49px;
+      margin-top: 43px;
+      margin-bottom: 0px;
+    }
+
+    .subscribe {
+      font-size: 20px;
+      margin-top: 16px;
+    }
+
+    form {
+      margin-bottom: 52px;
+    }
+    input[type=email] {
+      width: 60%;
+    padding: 20px 32px 18px 32px;
+    border-radius: 30px;
+    font-family: inherit;
+    }
+
+    ::placeholder {
+      color: $gray;
+      opacity: .6;
+      font-size: 15px;
+  }
+
+    button {
+      width: 29%;
+      font-size: 17px;
+      font-family: inherit;
+      padding: 19px 32px;
+      border-radius: 30px;
+      margin-left: 10px;
+    }
+    .button:hover {
+      background-color: $blue;transition-duration: 0.4s;
+      opacity: 0.6;
+    }
+
+    .error {
+      color: #ff7a7a;
+      font-style: italic;
+      font-size: 10px;
+      display: block;
+      position: relative;
+      bottom: 3px;
+    right: 173px;
+    }
+  
+    .error-border {
+      border: 1px solid $light-red !important;
+    }
+  
+    .error-spacing {
+      margin-top: 0px;
+    }
+
+    
+
+    .dashboard {
+      width: 92%;
+    margin: 23px 0 65px 0;
+    }
+    
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+
+  input[type=email] {
+    width: 60%;
+  padding: 20px 32px 18px 32px;
+  border-radius: 30px;
+  font-family: inherit;
+  }
+}
+
+
+.attribution, .copyright {
+  font-size: 11px; 
+  text-align: center;
+  a {
+      color: inherit;
+  }
+}
